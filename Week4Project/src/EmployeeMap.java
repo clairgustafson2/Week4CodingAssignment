@@ -43,17 +43,17 @@ public class EmployeeMap {
 		}
 		
 		// Create string builder and iterate over the ids HashSet and append each id, followed by a dash “-“ to idsBuilder
-		StringBuilder idsBuidler = new StringBuilder();
+		StringBuilder idsBuilder = new StringBuilder();
 		for (int id : ids) {
-			idsBuidler.append(id + "-");
+			idsBuilder.append(id).append("-");
 		}
-		
-		System.out.println(idsBuidler.toString());
+		idsBuilder.deleteCharAt(idsBuilder.length()-1);
+		System.out.println(idsBuilder.toString());
 		
 		//Create string builder called namesBuilder. Iterate over the employeeNames ArrayList and append each name, followed by a space
 		StringBuilder namesBuilder = new StringBuilder();
 		for (String employeeName : employeeNames) {
-			namesBuilder.append(employeeName + " ");
+			namesBuilder.append(employeeName + "  ");
 		}
 		System.out.println(namesBuilder.toString());
 	}
